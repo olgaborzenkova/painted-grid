@@ -1,0 +1,22 @@
+{
+  "red": {
+    "name": "Red",
+    "fill": "rgb(222, 10, 10)",
+    "id": "red"
+  },
+  "green": {
+    "name": "Green",
+    "fill": "rgb(6, 127, 0)",
+    "id": "green"
+  },
+  "blue": {
+    "name": "Blue",
+    "fill": "rgb(9, 70, 161)",
+    "id": "blue"
+  },
+  "black": {
+    "name": "Black",
+    "fill": "rgb(0, 0, 0)",
+    "id": "black"
+  }
+}

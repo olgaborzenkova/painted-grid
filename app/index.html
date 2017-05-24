@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- TODO: rewrite tempate using pug -->
+<html lang="en" ng-app="paintedGridApp">
+<head>
+  <meta charset="utf-8">
+  <title>Painted Grid App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="app.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body ng-controller="PaintedGridController">
+
+  <div class="control-wrapper">
+    <a href="#" class="btn btn-reset">Reset</a>
+    <a href="#" class="btn btn-save">Save</a>
+    <a href="#" class="btn btn-load">Load</a>
+  </div>
+
+  <div class="palette-wrapper">
+    <h2>Palette</h2>
+    <ul>
+      <li ng-repeat="color in colors" class="{{color.id}}">
+        <span class="color" style="background-color: {{color.fill}}" draggable="true"></span>
+        <span class="name">{{color.name}}</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="grid-wrapper">
+    <h2>Grid</h2>
+    <ul>
+      <li ng-repeat="box in paintingGrid" class="{{box}}">
+        <span class="color" style=""></span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="json-wrapper"></div>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
